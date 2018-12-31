@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Input</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <p>Nome digitado: {{nome}}</p>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label color='primary'>Nome</ion-label>
+      <ion-input type='text' [(ngModel)]='nome'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed focus>Email</ion-label>
+      <ion-input type='email'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating color='danger'>Telefone</ion-label>
+      <ion-input type='tel'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Endereço</ion-label>
+      <ion-input type='text' placeholder='Endereço residencial'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Senha</ion-label>
+      <ion-input type='password'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type='number' placeholder='Clear label'></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

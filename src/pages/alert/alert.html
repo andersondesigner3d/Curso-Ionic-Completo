@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Alerts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button round (click)='alertSimples()'>Alert simples</button>
+  <br>
+  <button ion-button round color='secondary' (click)='alertInputs()'>Alert com dois botões e input text</button>
+  <br>
+  <button ion-button round color='danger' (click)='alertRadio()'>Alert com radios</button>
+  <br>
+  <button ion-button round color='dark' (click)='alertCheckbox()'>Alert com checkboxs</button>
+</ion-content>

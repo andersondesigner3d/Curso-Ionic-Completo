@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>DateTime</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list >
+    <ion-item>
+      <ion-label>Data</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]='dados.datasimples'></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Data 2</ion-label>
+        <ion-datetime displayFormat="DD MMMM YYYY" pickerFormat="DD MMMM YYYY" [(ngModel)]='dados.datasimples'></ion-datetime>
+      </ion-item>
+
+    <ion-item>
+      <ion-label>Hora</ion-label>
+      <ion-datetime displayFormat="hh:mm" pickerFormat="hh mm" [(ngModel)]='dados.hora'></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Data 3</ion-label>
+      <ion-datetime displayFormat="DD MM YY HH:mm" pickerFormat="DD MM YY hh mm" [(ngModel)]='dados.datacompleta'></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Data Atual</ion-label>
+      <ion-datetime displayFormat="DD MMM YY HH:mm" pickerFormat="DD MMM YY hh mm" [(ngModel)]='captura'></ion-datetime>
+    </ion-item>
+
+    
+  </ion-list>
+
+</ion-content>

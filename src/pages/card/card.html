@@ -1,0 +1,140 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Cards</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+  <!--card simples-->
+  <ion-card>
+    <ion-card-header>
+      Card simples header
+    </ion-card-header>
+    <ion-card-content>
+      Corpo de um card simples.
+    </ion-card-content>
+  </ion-card>
+
+  <!--card com lista-->
+  <ion-card>
+    <ion-card-header>
+      Lists em cards
+    </ion-card-header>
+    <ion-list >
+
+      <button ion-item>
+        <ion-icon name="cart" item-start></ion-icon>
+        Compras
+      </button>
+
+      <button ion-item>
+        <ion-icon name="medical" item-start></ion-icon>
+        Medicamentos
+      </button>
+
+      <button ion-item>
+        <ion-icon name="cafe" item-start></ion-icon>
+        Café
+      </button>
+
+      <button ion-item>
+        <ion-icon name="paw" item-start></ion-icon>
+        Passeio com cachorro
+      </button>        
+
+    </ion-list>
+  </ion-card>
+
+  <!--card com imagens-->
+  <ion-card>
+    <img src='https://ionicframework.com/dist/preview-app/www/assets/img/nin-live.png'>
+    <ion-card-content>
+      <ion-card-title>
+        Show de rock em São Paulo!
+      </ion-card-title>
+      <p>Neste fim de semana você não pode perder um super show de rock que ocorrerá em SP!</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!--card com background image-->
+  <ion-card>
+    <img src='https://ionicframework.com/dist/preview-app/www/assets/img/card-saopaolo.png'>
+    <div class='card-title1'>São Paulo</div>
+    <div class='card-subtitle1'>41 pessoas online</div>    
+  </ion-card>
+
+  <!--card para redes sociais-->
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src='https://ionicframework.com/dist/preview-app/www/assets/img/marty-avatar.png'>
+      </ion-avatar>
+      <h2>Marty Mcfly</h2>
+      <p>25 de dezembro de 2018</p>
+    </ion-item>
+
+    <img src='https://ionicframework.com/dist/preview-app/www/assets/img/advance-card-bttf.png'>
+
+    <ion-card-content>
+      <p>Esperem um minuto! Foi anunciado nesta terça-feira que o clássico De volta para o futuro terá uma continuação oficial!</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name='thumbs-up'></ion-icon>
+          <div>12 curtidas</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name='text'></ion-icon>
+          <div>15 comentários</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <ion-note>
+          14:49h
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <!--card com mapas-->
+  <ion-card>
+    <img src='https://ionicframework.com/dist/preview-app/www/assets/img/advance-card-map-madison.png'>
+
+    <ion-fab right top>
+      <button ion-fab>
+        <ion-icon name='pin'></ion-icon>
+      </button>
+    </ion-fab>
+
+    <ion-item>
+      <ion-icon name='football' item-start large></ion-icon>
+      <h2>Estádio de futebol</h2>
+      <p>Av. Salgado Filho, n2345, Tirol</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='wine' item-start large></ion-icon>
+      <h2>Loja de Vinhos Finos</h2>
+      <p>Av. Bernardo Vieira, n587, Lagoa Seca</p>
+    </ion-item>
+
+    <ion-item>
+      <span item-start class='distancia'>18 min</span>
+      <span item-start>(2,6 km)</span>
+      <button ion-button icon-start clear item-end>
+        <ion-icon name='navigate'></ion-icon>
+        Começar
+      </button>
+    </ion-item>    
+  </ion-card>
+  
+
+</ion-content>

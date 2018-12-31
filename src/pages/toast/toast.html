@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Toast</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list >
+    <ion-item>
+      <button ion-button (click)='superior()'>Toast superior</button>
+    </ion-item>
+    
+    <ion-item>
+      <button ion-button color='secondary' (click)='inferior()'>Toast superior</button>
+    </ion-item>
+    
+    <ion-item>
+      <button ion-button color='danger' (click)='centro()'>Toast superior</button>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button color='rosa' (click)='tempo()'>Toast sem tempo com botão de fechar</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

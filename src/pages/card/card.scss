@@ -1,0 +1,34 @@
+page-card {
+
+    ion-card{
+        position: relative;
+        text-align: center;
+    }
+
+    ion-card p{
+        text-align: justify;
+    }
+
+    .card-title1{
+        position: absolute;
+        top: 36%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: white;
+    }
+
+    .card-subtitle1{
+        position: absolute;
+        top: 52%;
+        font-size: 1.0em;
+        width: 100%;
+        color: white;
+    }
+
+    .distancia{
+        color: green;
+        font-weight: bold;
+    }
+
+}

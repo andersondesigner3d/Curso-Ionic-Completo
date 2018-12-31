@@ -1,0 +1,129 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Segment</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-segment [(ngModel)]='pet'>
+    <ion-segment-button value='kittens'>
+      Kittens
+    </ion-segment-button>
+    <ion-segment-button value='puppies'>
+      Puppies
+    </ion-segment-button>
+    <ion-segment-button value='ducklings'>
+      Ducklings
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [(ngSwitch)]='pet'>
+
+    <ion-list *ngSwitchCase="'puppies'" >
+
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src='https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-puppy-1.jpg'>
+        </ion-thumbnail>
+        <h2>Oscar</h2>
+      </ion-item>
+      
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src='https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-puppy-2.jpg'>
+        </ion-thumbnail>
+        <h2>Oscar</h2>
+      </ion-item>
+      
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src='https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-puppy-4.jpg'>
+        </ion-thumbnail>
+        <h2>Oscar</h2>
+      </ion-item>
+      
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src='https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-puppy-3.jpg'>
+        </ion-thumbnail>
+        <h2>Oscar</h2>
+      </ion-item>
+
+    </ion-list>
+
+    <!--fim dos puppies inicio dos kittens-->
+
+    <ion-list *ngSwitchCase="'kittens'">
+    
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src='https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-kitten-1.jpg'>
+        </ion-thumbnail>
+        <h2>Oscar</h2>
+      </ion-item>
+    
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src='https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-kitten-3.jpg'>
+        </ion-thumbnail>
+        <h2>Oscar</h2>
+      </ion-item>
+    
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src='https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-kitten-2.jpg'>
+        </ion-thumbnail>
+        <h2>Oscar</h2>
+      </ion-item>
+    
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src='https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-kitten-4.jpg'>
+        </ion-thumbnail>
+        <h2>Oscar</h2>
+      </ion-item>
+    
+    </ion-list>
+
+    <!--fim dos kittens inicio dos ducklings-->
+    
+    <ion-list *ngSwitchCase="'ducklings'">
+    
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src='https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-duckling-1.jpg'>
+        </ion-thumbnail>
+        <h2>Oscar</h2>
+      </ion-item>
+    
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src='https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-duckling-2.jpg'>
+        </ion-thumbnail>
+        <h2>Oscar</h2>
+      </ion-item>
+    
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src='https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-duckling-3.jpg'>
+        </ion-thumbnail>
+        <h2>Oscar</h2>
+      </ion-item>
+    
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src='https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-duckling-4.jpg'>
+        </ion-thumbnail>
+        <h2>Oscar</h2>
+      </ion-item>
+    
+    </ion-list>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Radio</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+
+  <ion-list radio-group>
+
+    <ion-list-header>Alimentos</ion-list-header>
+
+    <ion-item>
+      <ion-label>Abóbora</ion-label>
+      <ion-radio checked='true' value='ab'></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Macaxeira</ion-label>
+      <ion-radio color='secondary' checked='false' value='mx'></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Batata</ion-label>
+      <ion-radio disabled='true' checked='false' value='bt'></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Uva</ion-label>
+      <ion-radio color='danger' checked='false' value='uv'></ion-radio>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

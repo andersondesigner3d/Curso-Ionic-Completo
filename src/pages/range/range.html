@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Range</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-range min='0' max='100' color='dark' pin='true'>
+      <ion-label range-left>0</ion-label>
+      <ion-label range-right>100</ion-label>
+    </ion-range>
+  </ion-item>
+
+  <p>Brilho: {{brilho}}</p>
+  <ion-item>
+    <ion-range min='100' max='300' color='danger' [(ngModel)]='brilho'>
+      <ion-label range-left>100</ion-label>
+      <ion-label range-right>300</ion-label>
+    </ion-range>
+  </ion-item>
+
+  <p>Sombra: {{sombra}}</p>
+  <ion-item>
+    <ion-range min='0' max='100' color='secondary' [(ngModel)]='sombra' step='10' snaps>
+      <ion-label range-left>0</ion-label>
+      <ion-label range-right>100</ion-label>
+    </ion-range>
+  </ion-item>
+
+  <p>Idade Mínima: {{idade.lower}}</p>
+  <p>Idade Máxima: {{idade.upper}}</p>
+  <p>Diferença de idade: {{diferenca}}</p>
+  <ion-item>
+    <ion-range dualKnobs='true' min='10' max='100' color='rosa' [(ngModel)]='idade' (ionChange)="calculaDiferenca()">
+      <ion-label range-left>10</ion-label>
+      <ion-label range-right>100</ion-label>
+    </ion-range>
+  </ion-item>
+
+</ion-content>

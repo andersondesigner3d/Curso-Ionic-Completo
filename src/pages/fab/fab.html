@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Fab</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+
+  <ion-fab top right>
+    <button ion-fab mini><ion-icon name ='home'></ion-icon></button>
+    <ion-fab-list >
+        <button ion-fab mini><ion-icon name ='add'></ion-icon></button>
+        <button ion-fab mini><ion-icon name ='cafe'></ion-icon></button>
+        <button ion-fab mini><ion-icon name ='md-alarm'></ion-icon></button>
+        <button ion-fab mini><ion-icon name ='md-appstore'></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab middle left>
+      <button ion-fab mini><ion-icon name ='cafe'></ion-icon></button>
+      <ion-fab-list side='right'>
+          <button ion-fab mini><ion-icon name ='add'></ion-icon></button>
+          <button ion-fab mini><ion-icon name ='home'></ion-icon></button>
+          <button ion-fab mini><ion-icon name ='md-alarm'></ion-icon></button>
+          <button ion-fab mini><ion-icon name ='md-appstore'></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+
+    <ion-fab middle center>
+        <button ion-fab mini color='danger'><ion-icon name ='md-at'></ion-icon></button>
+        <ion-fab-list side='top'>
+            <button ion-fab mini (click)='alerta()'><ion-icon name ='add'></ion-icon></button>
+            <button ion-fab mini><ion-icon name ='home'></ion-icon></button>
+            <button ion-fab mini><ion-icon name ='md-alarm'></ion-icon></button>
+            <button ion-fab mini><ion-icon name ='md-appstore'></ion-icon></button>
+        </ion-fab-list>
+      </ion-fab>
+
+</ion-content>
