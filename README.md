@@ -1,2 +1,2 @@
-Projeto em Ionic 3 criado por Anderson Rocha com o intúito de ajudar a novos progrmadores.
+Projeto em Ionic 3 criado por Anderson Rocha com o intúito de ajudar a novos programadores.
 Este projeto terá ao final exemplos com todos os componentes do Ionic 3 assim como as principais funções nativas.

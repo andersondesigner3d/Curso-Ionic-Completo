@@ -24,6 +24,7 @@ import { ToastPage } from '../pages/toast/toast';
 import { ToobarPage } from '../pages/toobar/toobar';
 import { SegmentPage } from '../pages/segment/segment';
 import { TabsPage } from '../pages/tabs/tabs';
+import { SelectPage } from '../pages/select/select';
 
 @Component({
   templateUrl: 'app.html'
@@ -31,7 +32,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = SelectPage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -60,7 +61,8 @@ export class MyApp {
       { title: 'Toast', component: ToastPage },
       { title: 'Toolbar', component: ToobarPage },
       { title: 'Segment', component: SegmentPage },
-      { title: 'Tabs', component: TabsPage }
+      { title: 'Tabs', component: TabsPage },
+      { title: 'Select', component: SelectPage }
     ];
 
   }

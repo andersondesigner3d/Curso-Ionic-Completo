@@ -27,6 +27,7 @@ import { ToastPage } from '../pages/toast/toast';
 import { ToobarPage } from '../pages/toobar/toobar';
 import { SegmentPage } from '../pages/segment/segment';
 import { TabsPage } from '../pages/tabs/tabs';
+import { SelectPage } from '../pages/select/select';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     ToastPage,
     ToobarPage,
     SegmentPage,
-    TabsPage
+    TabsPage,
+    SelectPage
   ],
   imports: [
     BrowserModule,
@@ -80,7 +82,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     ToastPage,
     ToobarPage,
     SegmentPage,
-    TabsPage
+    TabsPage,
+    SelectPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Select</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list >
+    <ion-item>
+      <ion-label>Frutas simples</ion-label>
+      <ion-select [selectOptions]='dados'>
+        <ion-option value='m'>Maçã</ion-option>
+        <ion-option value='p'>Pêra</ion-option>
+        <ion-option value='me'>Melancia</ion-option>
+        <ion-option value='u'>Uva</ion-option>
+        <ion-option value='l'>Limão</ion-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Frutas multiplas</ion-label>
+      <ion-select [selectOptions]='dados' multiple='true'>
+        <ion-option value='m'>Maçã</ion-option>
+        <ion-option value='p'>Pêra</ion-option>
+        <ion-option value='me'>Melancia</ion-option>
+        <ion-option value='u'>Uva</ion-option>
+        <ion-option value='l'>Limão</ion-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Frutas Action Script</ion-label>
+      <ion-select [selectOptions]='dados' interface='action-sheet'>
+        <ion-option value='m'>Maçã</ion-option>
+        <ion-option value='p'>Pêra</ion-option>
+        <ion-option value='me'>Melancia</ion-option>
+        <ion-option value='u'>Uva</ion-option>
+        <ion-option value='l'>Limão</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Frutas Popover</ion-label>
+      <ion-select [selectOptions]='dados' interface='popover'>
+        <ion-option value='m'>Maçã</ion-option>
+        <ion-option value='p'>Pêra</ion-option>
+        <ion-option value='me'>Melancia</ion-option>
+        <ion-option value='u'>Uva</ion-option>
+        <ion-option value='l'>Limão</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
