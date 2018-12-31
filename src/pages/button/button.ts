@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { InputPage } from '../input/input';
 
 @IonicPage()
 @Component({
@@ -15,6 +16,10 @@ export class ButtonPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ButtonPage');
+  }
+
+  mudaPagina(){
+    this.navCtrl.setRoot(InputPage);
   }
 
 }

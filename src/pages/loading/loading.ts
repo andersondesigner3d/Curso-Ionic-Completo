@@ -29,7 +29,8 @@ export class LoadingPage {
     loading.present();
 
     setTimeout(()=>{
-      this.navCtrl.push(HomePage);
+      this.navCtrl.setRoot(HomePage);
+      //this.navCtrl.push(HomePage);
     },3000);
 
     loading.onDidDismiss(()=>{
