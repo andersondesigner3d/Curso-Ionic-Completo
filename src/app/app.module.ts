@@ -28,6 +28,9 @@ import { ToobarPage } from '../pages/toobar/toobar';
 import { SegmentPage } from '../pages/segment/segment';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SelectPage } from '../pages/select/select';
+import { Paginacao1Page } from '../pages/paginacao1/paginacao1';
+import { Paginacao2Page } from '../pages/paginacao2/paginacao2';
+import { Paginacao3Page } from '../pages/paginacao3/paginacao3';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,10 @@ import { SelectPage } from '../pages/select/select';
     ToobarPage,
     SegmentPage,
     TabsPage,
-    SelectPage
+    SelectPage,
+    Paginacao1Page,
+    Paginacao2Page,
+    Paginacao3Page
   ],
   imports: [
     BrowserModule,
@@ -83,7 +89,10 @@ import { SelectPage } from '../pages/select/select';
     ToobarPage,
     SegmentPage,
     TabsPage,
-    SelectPage
+    SelectPage,
+    Paginacao1Page,
+    Paginacao2Page,
+    Paginacao3Page
   ],
   providers: [
     StatusBar,

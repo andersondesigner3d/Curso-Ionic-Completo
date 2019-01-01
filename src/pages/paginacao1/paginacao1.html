@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Paginação 1</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>Digite seu nome</ion-label>
+    <ion-input autofocus type='text' [(ngModel)]='nomedigitado'></ion-input>
+  </ion-item>
+  
+  <ion-list>
+    <ion-item>
+      <button (click)='pagina2Root()' ion-button>Pagina 2 com Root</button>
+    </ion-item>
+  
+    <ion-item>
+      <button (click)='pagina2Push()' ion-button>Pagina 2 com Push</button>
+    </ion-item>
+
+    <ion-item>
+      <button (click)='pag3root()' ion-button>Pagina 3 com Root sem parâmetros</button>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

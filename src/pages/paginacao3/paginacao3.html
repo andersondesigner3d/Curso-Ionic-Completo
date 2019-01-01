@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Paginação 3</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list *ngIf='dadosrecebidos != null'>
+    <ion-item>Nome: {{dadosrecebidos.nome}}</ion-item>
+    <ion-item>Idade: {{dadosrecebidos.idade}}</ion-item>
+  </ion-list>
+  
+  <ion-list>
+    <ion-item>
+      <button (click)='pagina1Poptoroot()' ion-button>Pagina Inicial da rota com Poptoroot</button>
+    </ion-item>
+  
+    <ion-item>
+      <button (click)='pagina1Root()' ion-button>Pagina 1 com Root</button>
+    </ion-item>
+  
+  </ion-list>
+
+</ion-content>
