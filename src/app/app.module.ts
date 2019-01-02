@@ -1,3 +1,4 @@
+import { ModalconteudoPage } from './../pages/modalconteudo/modalconteudo';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -31,6 +32,7 @@ import { SelectPage } from '../pages/select/select';
 import { Paginacao1Page } from '../pages/paginacao1/paginacao1';
 import { Paginacao2Page } from '../pages/paginacao2/paginacao2';
 import { Paginacao3Page } from '../pages/paginacao3/paginacao3';
+import { ModalPage } from '../pages/modal/modal';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { Paginacao3Page } from '../pages/paginacao3/paginacao3';
     SelectPage,
     Paginacao1Page,
     Paginacao2Page,
-    Paginacao3Page
+    Paginacao3Page,
+    ModalPage,
+    ModalconteudoPage
   ],
   imports: [
     BrowserModule,
@@ -92,7 +96,9 @@ import { Paginacao3Page } from '../pages/paginacao3/paginacao3';
     SelectPage,
     Paginacao1Page,
     Paginacao2Page,
-    Paginacao3Page
+    Paginacao3Page,
+    ModalPage,
+    ModalconteudoPage
   ],
   providers: [
     StatusBar,

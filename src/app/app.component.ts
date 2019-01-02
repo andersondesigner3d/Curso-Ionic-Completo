@@ -26,6 +26,7 @@ import { SegmentPage } from '../pages/segment/segment';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SelectPage } from '../pages/select/select';
 import { Paginacao1Page } from '../pages/paginacao1/paginacao1';
+import { ModalPage } from '../pages/modal/modal';
 
 @Component({
   templateUrl: 'app.html'
@@ -33,7 +34,7 @@ import { Paginacao1Page } from '../pages/paginacao1/paginacao1';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Paginacao1Page;//HomePage
+  rootPage: any = HomePage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -64,7 +65,8 @@ export class MyApp {
       { title: 'Segment', component: SegmentPage },
       { title: 'Tabs', component: TabsPage },
       { title: 'Select', component: SelectPage },
-      { title: 'Paginação', component: Paginacao1Page }
+      { title: 'Paginação', component: Paginacao1Page },
+      { title: 'Modal', component: ModalPage }
     ];
 
   }

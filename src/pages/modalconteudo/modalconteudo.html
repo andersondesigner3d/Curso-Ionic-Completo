@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modal conteúdo</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)='fecharModal()'>
+        <ion-icon name='md-close'></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list *ngIf="recebido != null">
+    <ion-item>Nome: {{recebido.nome}}</ion-item>
+    <ion-item>Idade: {{recebido.idade}}</ion-item>
+    <ion-item>
+      <ion-label color='primary'>Dado de retorno</ion-label>
+      <ion-input autofocus type='text' [(ngModel)]='valor'></ion-input>
+    </ion-item>
+  </ion-list>
+  <p *ngIf="recebido==null">Não foram passados parâmetros da página anterior</p>
+
+</ion-content>
