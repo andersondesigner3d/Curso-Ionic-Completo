@@ -34,6 +34,7 @@ import { Paginacao2Page } from '../pages/paginacao2/paginacao2';
 import { Paginacao3Page } from '../pages/paginacao3/paginacao3';
 import { ModalPage } from '../pages/modal/modal';
 import { SlidesPage } from '../pages/slides/slides';
+import { TipografiaPage } from '../pages/tipografia/tipografia';
 
 @NgModule({
   declarations: [
@@ -65,11 +66,13 @@ import { SlidesPage } from '../pages/slides/slides';
     Paginacao3Page,
     ModalPage,
     ModalconteudoPage,
-    SlidesPage
+    SlidesPage,
+    TipografiaPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    //IonicModule.forRoot(MyApp, {mode: 'ios'}), //para deixar o app igual em todos sistemas
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -101,7 +104,8 @@ import { SlidesPage } from '../pages/slides/slides';
     Paginacao3Page,
     ModalPage,
     ModalconteudoPage,
-    SlidesPage
+    SlidesPage,
+    TipografiaPage
   ],
   providers: [
     StatusBar,
