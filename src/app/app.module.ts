@@ -33,6 +33,7 @@ import { Paginacao1Page } from '../pages/paginacao1/paginacao1';
 import { Paginacao2Page } from '../pages/paginacao2/paginacao2';
 import { Paginacao3Page } from '../pages/paginacao3/paginacao3';
 import { ModalPage } from '../pages/modal/modal';
+import { SlidesPage } from '../pages/slides/slides';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { ModalPage } from '../pages/modal/modal';
     Paginacao2Page,
     Paginacao3Page,
     ModalPage,
-    ModalconteudoPage
+    ModalconteudoPage,
+    SlidesPage
   ],
   imports: [
     BrowserModule,
@@ -98,7 +100,8 @@ import { ModalPage } from '../pages/modal/modal';
     Paginacao2Page,
     Paginacao3Page,
     ModalPage,
-    ModalconteudoPage
+    ModalconteudoPage,
+    SlidesPage
   ],
   providers: [
     StatusBar,

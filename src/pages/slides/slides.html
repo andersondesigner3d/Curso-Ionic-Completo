@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Slides</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-slides style="text-align: center" loop pager>
+
+    <ion-slide>
+      <img src='https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-1.png'>
+      <h1>Bem vindo ao nosso curso!</h1>
+      <p>Neste curso você vai aprender muitas coisas legais sobre o Framework <strong>Ionic.</strong></p>
+    </ion-slide>
+    
+    <ion-slide>
+      <img src='https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-2.png'>
+      <h1>O que é Ionic?</h1>
+      <p>Ionic é um framework que facilita a criação de apps híbridos pra <strong>Android</strong> e <strong>IOS.</strong></p>
+    </ion-slide>
+    
+    <ion-slide>
+      <img src='https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-3.png'>
+      <h1>O que é o Ionic Cloud?</h1>
+      <p>É uma plataforma onde vocÊ pode trabalhar em núvem com dados da internet.</p>
+    </ion-slide>
+    
+    <ion-slide>
+      <img src='https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-4.png'>
+      <h1>Preparado para começar!?</h1>
+      <button ion-button icon-right color='primary' block clear>
+        Continue
+        <ion-icon name='md-arrow-dropright'></ion-icon>
+      </button>
+    </ion-slide>
+
+  </ion-slides>
+  <br>
+  <hr>
+  <br>
+  <ion-slides loop pager>
+    <ion-slide *ngFor="let imagens of imagem">
+      <p>Teste de slides com loop e variável:</p>
+      <img src="{{imagens}}">
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
