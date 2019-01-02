@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Chip</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-chip>
+      <ion-label>Default</ion-label>
+    </ion-chip>
+    
+    <ion-chip>
+      <ion-label color="secondary">Secondary Label</ion-label>
+    </ion-chip>
+    
+    <ion-chip color="secondary">
+      <ion-label color="dark">Secondary w/ Dark label</ion-label>
+    </ion-chip>
+    
+    <ion-chip color="danger">
+      <ion-label>Danger</ion-label>
+    </ion-chip>
+    
+    <ion-chip>
+      <ion-icon name="pin"></ion-icon>
+      <ion-label>Default</ion-label>
+    </ion-chip>
+    
+    <ion-chip>
+      <ion-icon name="heart" color="dark"></ion-icon>
+      <ion-label>Default</ion-label>
+    </ion-chip>
+    
+    <ion-chip>
+      <ion-avatar>
+        <img src="https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/44939497_1909736932478993_3230148794838417408_n.jpg?_nc_cat=109&_nc_ht=scontent.fnat1-1.fna&oh=b60f2ff3809950ef6c2b5656713dee84&oe=5CD12B0A">
+      </ion-avatar>
+      <ion-label>Default</ion-label>
+    </ion-chip>
+
+    <ion-chip #chip1>
+      <ion-label>Default</ion-label>
+      <button ion-button clear color="danger">
+        <ion-icon name="close-circle"></ion-icon>
+      </button>
+    </ion-chip>
+
+    <ion-chip #chip2>
+      <ion-icon name="pin" color="primary"></ion-icon>
+      <ion-label>With Icon</ion-label>
+      <button ion-button>
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-chip>
+    
+    <ion-chip #chip3>
+      <ion-avatar>
+        <img src="https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/44939497_1909736932478993_3230148794838417408_n.jpg?_nc_cat=109&_nc_ht=scontent.fnat1-1.fna&oh=b60f2ff3809950ef6c2b5656713dee84&oe=5CD12B0A">
+      </ion-avatar>
+      <ion-label>With Avatar</ion-label>
+      <button ion-button clear color="dark">
+        <ion-icon name="close-circle"></ion-icon>
+      </button>
+    </ion-chip>
+
+</ion-content>

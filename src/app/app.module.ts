@@ -35,6 +35,7 @@ import { Paginacao3Page } from '../pages/paginacao3/paginacao3';
 import { ModalPage } from '../pages/modal/modal';
 import { SlidesPage } from '../pages/slides/slides';
 import { TipografiaPage } from '../pages/tipografia/tipografia';
+import { ChipPage } from '../pages/chip/chip';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { TipografiaPage } from '../pages/tipografia/tipografia';
     ModalPage,
     ModalconteudoPage,
     SlidesPage,
-    TipografiaPage
+    TipografiaPage,
+    ChipPage
   ],
   imports: [
     BrowserModule,
@@ -105,7 +107,8 @@ import { TipografiaPage } from '../pages/tipografia/tipografia';
     ModalPage,
     ModalconteudoPage,
     SlidesPage,
-    TipografiaPage
+    TipografiaPage,
+    ChipPage
   ],
   providers: [
     StatusBar,

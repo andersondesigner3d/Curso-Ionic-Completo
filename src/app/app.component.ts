@@ -29,6 +29,7 @@ import { Paginacao1Page } from '../pages/paginacao1/paginacao1';
 import { ModalPage } from '../pages/modal/modal';
 import { SlidesPage } from '../pages/slides/slides';
 import { TipografiaPage } from '../pages/tipografia/tipografia';
+import { ChipPage } from '../pages/chip/chip';
 
 @Component({
   templateUrl: 'app.html'
@@ -36,7 +37,7 @@ import { TipografiaPage } from '../pages/tipografia/tipografia';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = TipografiaPage;//HomePage
+  rootPage: any = ChipPage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -70,7 +71,8 @@ export class MyApp {
       { title: 'Paginação', component: Paginacao1Page },
       { title: 'Modal', component: ModalPage },
       { title: 'Slides', component: SlidesPage },
-      { title: 'Tipografia', component: TipografiaPage }
+      { title: 'Tipografia', component: TipografiaPage },
+      { title: 'Chip', component: ChipPage }
     ];
 
   }
