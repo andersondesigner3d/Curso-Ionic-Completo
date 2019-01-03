@@ -38,6 +38,7 @@ import { TipografiaPage } from '../pages/tipografia/tipografia';
 import { ChipPage } from '../pages/chip/chip';
 import { PopoverPage } from '../pages/popover/popover';
 import { Popover2Page } from '../pages/popover2/popover2';
+import { SearchbarPage } from '../pages/searchbar/searchbar';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { Popover2Page } from '../pages/popover2/popover2';
     TipografiaPage,
     ChipPage,
     PopoverPage,
-    Popover2Page
+    Popover2Page,
+    SearchbarPage
   ],
   imports: [
     BrowserModule,
@@ -114,7 +116,8 @@ import { Popover2Page } from '../pages/popover2/popover2';
     TipografiaPage,
     ChipPage,
     PopoverPage,
-    Popover2Page
+    Popover2Page,
+    SearchbarPage
   ],
   providers: [
     StatusBar,

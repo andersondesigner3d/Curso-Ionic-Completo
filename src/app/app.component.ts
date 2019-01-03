@@ -31,6 +31,7 @@ import { SlidesPage } from '../pages/slides/slides';
 import { TipografiaPage } from '../pages/tipografia/tipografia';
 import { ChipPage } from '../pages/chip/chip';
 import { PopoverPage } from '../pages/popover/popover';
+import { SearchbarPage } from '../pages/searchbar/searchbar';
 
 @Component({
   templateUrl: 'app.html'
@@ -38,7 +39,7 @@ import { PopoverPage } from '../pages/popover/popover';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = PopoverPage;//HomePage
+  rootPage: any = SearchbarPage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -74,7 +75,8 @@ export class MyApp {
       { title: 'Slides', component: SlidesPage },
       { title: 'Tipografia', component: TipografiaPage },
       { title: 'Chip', component: ChipPage },
-      { title: 'Popover', component: PopoverPage }
+      { title: 'Popover', component: PopoverPage },
+      { title: 'Searchbar', component: SearchbarPage }
     ];
 
   }
