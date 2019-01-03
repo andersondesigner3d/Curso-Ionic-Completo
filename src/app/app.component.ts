@@ -39,7 +39,7 @@ import { SearchbarPage } from '../pages/searchbar/searchbar';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = SearchbarPage;//HomePage
+  rootPage: any = HomePage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
