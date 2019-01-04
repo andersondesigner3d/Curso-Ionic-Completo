@@ -33,6 +33,7 @@ import { ChipPage } from '../pages/chip/chip';
 import { PopoverPage } from '../pages/popover/popover';
 import { SearchbarPage } from '../pages/searchbar/searchbar';
 import { CameraPage } from '../pages/camera/camera';
+import { BarcodePage } from '../pages/barcode/barcode';
 
 @Component({
   templateUrl: 'app.html'
@@ -40,7 +41,7 @@ import { CameraPage } from '../pages/camera/camera';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = CameraPage;//HomePage
+  rootPage: any = BarcodePage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -78,7 +79,8 @@ export class MyApp {
       { title: 'Chip', component: ChipPage },
       { title: 'Popover', component: PopoverPage },
       { title: 'Searchbar', component: SearchbarPage },
-      { title: 'Câmera', component: CameraPage }
+      { title: 'Camera', component: CameraPage },
+      { title: 'Barcode', component: BarcodePage }
     ];
 
   }

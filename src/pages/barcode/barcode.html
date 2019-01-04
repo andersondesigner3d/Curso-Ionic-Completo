@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Barcode Scanner</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <p ion-text>Só funciona no celular.</p>
+  <button ion-button block (click)='escaniar()'>Escaniar produto</button>
+
+  <p ion-text *ngIf="resultado != null">{{resultado}}</p>
+
+</ion-content>

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { Camera } from '@ionic-native/camera';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -41,6 +42,7 @@ import { PopoverPage } from '../pages/popover/popover';
 import { Popover2Page } from '../pages/popover2/popover2';
 import { SearchbarPage } from '../pages/searchbar/searchbar';
 import { CameraPage } from '../pages/camera/camera';
+import { BarcodePage } from '../pages/barcode/barcode';
 
 @NgModule({
   declarations: [
@@ -78,7 +80,8 @@ import { CameraPage } from '../pages/camera/camera';
     PopoverPage,
     Popover2Page,
     SearchbarPage,
-    CameraPage
+    CameraPage,
+    BarcodePage
   ],
   imports: [
     BrowserModule,
@@ -121,12 +124,14 @@ import { CameraPage } from '../pages/camera/camera';
     PopoverPage,
     Popover2Page,
     SearchbarPage,
-    CameraPage
+    CameraPage,
+    BarcodePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Camera,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
