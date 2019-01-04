@@ -2,6 +2,7 @@ import { ModalconteudoPage } from './../pages/modalconteudo/modalconteudo';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { Camera } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -39,6 +40,7 @@ import { ChipPage } from '../pages/chip/chip';
 import { PopoverPage } from '../pages/popover/popover';
 import { Popover2Page } from '../pages/popover2/popover2';
 import { SearchbarPage } from '../pages/searchbar/searchbar';
+import { CameraPage } from '../pages/camera/camera';
 
 @NgModule({
   declarations: [
@@ -75,7 +77,8 @@ import { SearchbarPage } from '../pages/searchbar/searchbar';
     ChipPage,
     PopoverPage,
     Popover2Page,
-    SearchbarPage
+    SearchbarPage,
+    CameraPage
   ],
   imports: [
     BrowserModule,
@@ -117,11 +120,13 @@ import { SearchbarPage } from '../pages/searchbar/searchbar';
     ChipPage,
     PopoverPage,
     Popover2Page,
-    SearchbarPage
+    SearchbarPage,
+    CameraPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

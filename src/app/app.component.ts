@@ -32,6 +32,7 @@ import { TipografiaPage } from '../pages/tipografia/tipografia';
 import { ChipPage } from '../pages/chip/chip';
 import { PopoverPage } from '../pages/popover/popover';
 import { SearchbarPage } from '../pages/searchbar/searchbar';
+import { CameraPage } from '../pages/camera/camera';
 
 @Component({
   templateUrl: 'app.html'
@@ -39,7 +40,7 @@ import { SearchbarPage } from '../pages/searchbar/searchbar';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;//HomePage
+  rootPage: any = CameraPage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -76,7 +77,8 @@ export class MyApp {
       { title: 'Tipografia', component: TipografiaPage },
       { title: 'Chip', component: ChipPage },
       { title: 'Popover', component: PopoverPage },
-      { title: 'Searchbar', component: SearchbarPage }
+      { title: 'Searchbar', component: SearchbarPage },
+      { title: 'Câmera', component: CameraPage }
     ];
 
   }

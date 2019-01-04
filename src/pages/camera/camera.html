@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Câmera</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <p ion-text>Só funciona no Celular</p>
+  <button block ion-button (click)="tirarFoto()">Tirar Foto</button>
+
+  <ion-card  *ngIf="imagem != null">
+    <img src="{{imagem}}">
+  </ion-card>
+
+</ion-content>
