@@ -34,6 +34,7 @@ import { PopoverPage } from '../pages/popover/popover';
 import { SearchbarPage } from '../pages/searchbar/searchbar';
 import { CameraPage } from '../pages/camera/camera';
 import { BarcodePage } from '../pages/barcode/barcode';
+import { GeolocationPage } from '../pages/geolocation/geolocation';
 
 @Component({
   templateUrl: 'app.html'
@@ -41,7 +42,7 @@ import { BarcodePage } from '../pages/barcode/barcode';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = BarcodePage;//HomePage
+  rootPage: any = GeolocationPage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -80,7 +81,8 @@ export class MyApp {
       { title: 'Popover', component: PopoverPage },
       { title: 'Searchbar', component: SearchbarPage },
       { title: 'Camera', component: CameraPage },
-      { title: 'Barcode', component: BarcodePage }
+      { title: 'Barcode', component: BarcodePage },
+      { title: 'Geolocalização', component: GeolocationPage }       
     ];
 
   }

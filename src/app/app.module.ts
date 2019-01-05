@@ -4,6 +4,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { Camera } from '@ionic-native/camera';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -43,6 +44,7 @@ import { Popover2Page } from '../pages/popover2/popover2';
 import { SearchbarPage } from '../pages/searchbar/searchbar';
 import { CameraPage } from '../pages/camera/camera';
 import { BarcodePage } from '../pages/barcode/barcode';
+import { GeolocationPage } from '../pages/geolocation/geolocation';
 
 @NgModule({
   declarations: [
@@ -81,7 +83,8 @@ import { BarcodePage } from '../pages/barcode/barcode';
     Popover2Page,
     SearchbarPage,
     CameraPage,
-    BarcodePage
+    BarcodePage,
+    GeolocationPage
   ],
   imports: [
     BrowserModule,
@@ -125,14 +128,16 @@ import { BarcodePage } from '../pages/barcode/barcode';
     Popover2Page,
     SearchbarPage,
     CameraPage,
-    BarcodePage
+    BarcodePage,
+    GeolocationPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Camera,
     BarcodeScanner,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    Geolocation,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}
