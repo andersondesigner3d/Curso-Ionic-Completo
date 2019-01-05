@@ -45,6 +45,9 @@ import { SearchbarPage } from '../pages/searchbar/searchbar';
 import { CameraPage } from '../pages/camera/camera';
 import { BarcodePage } from '../pages/barcode/barcode';
 import { GeolocationPage } from '../pages/geolocation/geolocation';
+import { HttpPage } from '../pages/http/http';
+import { CepProvider } from '../providers/cep/cep';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -84,10 +87,12 @@ import { GeolocationPage } from '../pages/geolocation/geolocation';
     SearchbarPage,
     CameraPage,
     BarcodePage,
-    GeolocationPage
+    GeolocationPage,
+    HttpPage
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     //IonicModule.forRoot(MyApp, {mode: 'ios'}), //para deixar o app igual em todos sistemas
   ],
@@ -129,7 +134,8 @@ import { GeolocationPage } from '../pages/geolocation/geolocation';
     SearchbarPage,
     CameraPage,
     BarcodePage,
-    GeolocationPage
+    GeolocationPage,
+    HttpPage
   ],
   providers: [
     StatusBar,
@@ -138,6 +144,7 @@ import { GeolocationPage } from '../pages/geolocation/geolocation';
     BarcodeScanner,
     Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CepProvider,
   ]
 })
 export class AppModule {}

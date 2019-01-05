@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Requisição HTTP</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div style='text-align: center'>
+    <img style='height: 100px; margin-bottom: 50px; margin-top: 25px;' src='https://seeklogo.com/images/C/correios-2020-logo-D733E75ED9-seeklogo.com.png'>
+  </div>
+
+  <ion-card>
+    <ion-item>
+      <ion-label stacked>Digite seu CEP</ion-label>
+      <ion-input maxlength="8" autofocus type='number' [(ngModel)]='cepDigitado'></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button block color='primary' (click)='consultarCep()'>Pesquisar</button>
+    </ion-item>
+    <ion-item *ngIf='resposta'>
+      <p>Bairro: {{resposta.bairro}}</p>
+      <p>CEP: {{resposta.cep}}</p>
+      <p>Complemento: {{resposta.complemento}}</p>
+      <p>IBGE: {{resposta.ibge}}</p>
+      <p>Localidade: {{resposta.localidade}}</p>
+      <p>Logradouro: {{resposta.logradouro}}</p>
+      <p>UF: {{resposta.uf}}</p>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

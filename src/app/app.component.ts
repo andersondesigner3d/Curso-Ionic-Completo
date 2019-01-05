@@ -35,6 +35,7 @@ import { SearchbarPage } from '../pages/searchbar/searchbar';
 import { CameraPage } from '../pages/camera/camera';
 import { BarcodePage } from '../pages/barcode/barcode';
 import { GeolocationPage } from '../pages/geolocation/geolocation';
+import { HttpPage } from '../pages/http/http';
 
 @Component({
   templateUrl: 'app.html'
@@ -42,7 +43,7 @@ import { GeolocationPage } from '../pages/geolocation/geolocation';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = GeolocationPage;//HomePage
+  rootPage: any = HttpPage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -82,7 +83,8 @@ export class MyApp {
       { title: 'Searchbar', component: SearchbarPage },
       { title: 'Camera', component: CameraPage },
       { title: 'Barcode', component: BarcodePage },
-      { title: 'Geolocalização', component: GeolocationPage }       
+      { title: 'Geolocalização', component: GeolocationPage },
+      { title: 'HTTP', component: HttpPage }
     ];
 
   }
