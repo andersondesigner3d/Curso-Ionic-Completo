@@ -36,6 +36,7 @@ import { CameraPage } from '../pages/camera/camera';
 import { BarcodePage } from '../pages/barcode/barcode';
 import { GeolocationPage } from '../pages/geolocation/geolocation';
 import { HttpPage } from '../pages/http/http';
+import { VirtualscrollPage } from '../pages/virtualscroll/virtualscroll';
 
 @Component({
   templateUrl: 'app.html'
@@ -43,7 +44,7 @@ import { HttpPage } from '../pages/http/http';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HttpPage;//HomePage
+  rootPage: any = VirtualscrollPage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -84,7 +85,8 @@ export class MyApp {
       { title: 'Camera', component: CameraPage },
       { title: 'Barcode', component: BarcodePage },
       { title: 'Geolocalização', component: GeolocationPage },
-      { title: 'HTTP', component: HttpPage }
+      { title: 'HTTP', component: HttpPage },
+      { title: 'Virtual Scroll', component: VirtualscrollPage }      
     ];
 
   }

@@ -48,6 +48,8 @@ import { GeolocationPage } from '../pages/geolocation/geolocation';
 import { HttpPage } from '../pages/http/http';
 import { CepProvider } from '../providers/cep/cep';
 import { HttpModule } from '@angular/http';
+import { DataProvider } from '../providers/data/data';
+import { VirtualscrollPage } from '../pages/virtualscroll/virtualscroll';
 
 @NgModule({
   declarations: [
@@ -88,7 +90,8 @@ import { HttpModule } from '@angular/http';
     CameraPage,
     BarcodePage,
     GeolocationPage,
-    HttpPage
+    HttpPage,
+    VirtualscrollPage
   ],
   imports: [
     BrowserModule,
@@ -135,7 +138,8 @@ import { HttpModule } from '@angular/http';
     CameraPage,
     BarcodePage,
     GeolocationPage,
-    HttpPage
+    HttpPage,
+    VirtualscrollPage
   ],
   providers: [
     StatusBar,
@@ -145,6 +149,7 @@ import { HttpModule } from '@angular/http';
     Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CepProvider,
+    DataProvider,
   ]
 })
 export class AppModule {}
