@@ -50,6 +50,8 @@ import { CepProvider } from '../providers/cep/cep';
 import { HttpModule } from '@angular/http';
 import { DataProvider } from '../providers/data/data';
 import { VirtualscrollPage } from '../pages/virtualscroll/virtualscroll';
+import { HttpComplexoPage } from '../pages/http-complexo/http-complexo';
+import { AcumulandoProvider } from '../providers/acumulando/acumulando';
 
 @NgModule({
   declarations: [
@@ -91,7 +93,8 @@ import { VirtualscrollPage } from '../pages/virtualscroll/virtualscroll';
     BarcodePage,
     GeolocationPage,
     HttpPage,
-    VirtualscrollPage
+    VirtualscrollPage,
+    HttpComplexoPage
   ],
   imports: [
     BrowserModule,
@@ -139,7 +142,8 @@ import { VirtualscrollPage } from '../pages/virtualscroll/virtualscroll';
     BarcodePage,
     GeolocationPage,
     HttpPage,
-    VirtualscrollPage
+    VirtualscrollPage,
+    HttpComplexoPage
   ],
   providers: [
     StatusBar,
@@ -150,6 +154,7 @@ import { VirtualscrollPage } from '../pages/virtualscroll/virtualscroll';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CepProvider,
     DataProvider,
+    AcumulandoProvider,
   ]
 })
 export class AppModule {}

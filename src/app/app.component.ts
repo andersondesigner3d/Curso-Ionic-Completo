@@ -37,6 +37,7 @@ import { BarcodePage } from '../pages/barcode/barcode';
 import { GeolocationPage } from '../pages/geolocation/geolocation';
 import { HttpPage } from '../pages/http/http';
 import { VirtualscrollPage } from '../pages/virtualscroll/virtualscroll';
+import { HttpComplexoPage } from '../pages/http-complexo/http-complexo';
 
 @Component({
   templateUrl: 'app.html'
@@ -44,7 +45,7 @@ import { VirtualscrollPage } from '../pages/virtualscroll/virtualscroll';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = VirtualscrollPage;//HomePage
+  rootPage: any = HttpComplexoPage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -86,7 +87,8 @@ export class MyApp {
       { title: 'Barcode', component: BarcodePage },
       { title: 'Geolocalização', component: GeolocationPage },
       { title: 'HTTP', component: HttpPage },
-      { title: 'Virtual Scroll', component: VirtualscrollPage }      
+      { title: 'Virtual Scroll', component: VirtualscrollPage },
+      { title: 'Http Complexo', component: HttpComplexoPage }      
     ];
 
   }

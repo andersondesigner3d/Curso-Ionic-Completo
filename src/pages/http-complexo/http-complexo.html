@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Requisição HTTP</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style='background-color: #E6E6E6'>
+  <ion-card padding>
+    <h1>Cadastrar Usuários</h1>
+    <ion-item>
+      <ion-label stacked>Email:</ion-label>
+      <ion-input type='email' autofocus [(ngModel)]='emaildigitado' required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Senha:</ion-label>
+      <ion-input type='password' [(ngModel)]='senhadigitada' required></ion-input>
+    </ion-item>
+    <button ion-button cloclor='primary' block (click)="cadastroUser()">Cadastrar</button>
+  </ion-card>
+
+</ion-content>
