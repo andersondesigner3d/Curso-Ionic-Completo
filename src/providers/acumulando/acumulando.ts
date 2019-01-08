@@ -1,6 +1,6 @@
 import { ToastController } from 'ionic-angular';
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
@@ -9,6 +9,7 @@ export class AcumulandoProvider {
 
   resposta : string;
   url : string = 'https://www.acumulando.com.br/ionic_cadastro_usuario';
+  url2 : string = 'https://www.acumulando.com.br/ionic_get_usuario';
 
   constructor(public http : Http, public toastCtrl : ToastController) {
   }
@@ -46,5 +47,15 @@ export class AcumulandoProvider {
       toast.present();
     });
   }
+
+  getUsuarios(){
+
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.get(this.url2, {headers : headers}).toPromise();
+
+  }
+
 
 }

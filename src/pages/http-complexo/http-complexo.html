@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color='primary'>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content padding style='background-color: #E6E6E6'>
+  
   <ion-card padding>
     <h1>Cadastrar Usuários</h1>
     <ion-item>
@@ -20,5 +21,16 @@
     </ion-item>
     <button ion-button cloclor='primary' block (click)="cadastroUser()">Cadastrar</button>
   </ion-card>
+
+  <h2>Usuários cadastrados</h2>
+  <ion-list [virtualScroll]='listausuarios'>
+    <ion-item *virtualItem='let data'>
+      <ion-avatar item-start>
+        <img src='../assets/imgs/usuario-icon.jpg'>
+      </ion-avatar>
+      <h2>Email: {{data.email}}</h2>
+      <p>Senha: {{data.senha}}</p>
+    </ion-item>
+  </ion-list>
 
 </ion-content>
