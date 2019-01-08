@@ -22,7 +22,10 @@
     <button ion-button cloclor='primary' block (click)="cadastroUser()">Cadastrar</button>
   </ion-card>
 
-  <h2>Usuários cadastrados</h2>
+  <ion-item>
+    <h2>Usuários cadastrados:</h2>
+    <ion-badge item-end>{{quantos}}</ion-badge>
+  </ion-item>
   <ion-list [virtualScroll]='listausuarios'>
     <ion-item *virtualItem='let data'>
       <ion-avatar item-start>
@@ -31,7 +34,7 @@
       <p>Email: {{data.email}}</p>
       <p>Senha: {{data.senha}}</p>
       <button ion-button item-end color='secondary' (click)="abreEdita(data.id,data.email,data.senha)"><ion-icon name='md-create'></ion-icon></button>
-      <button ion-button item-end color='danger'><ion-icon name='trash'></ion-icon></button>
+      <button ion-button item-end color='danger' (click)="abreApaga(data.id,data.email)"><ion-icon name='trash'></ion-icon></button>
     </ion-item>
   </ion-list>
 

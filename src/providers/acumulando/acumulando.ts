@@ -11,6 +11,7 @@ export class AcumulandoProvider {
   url : string = 'https://www.acumulando.com.br/ionic_cadastro_usuario';
   url2 : string = 'https://www.acumulando.com.br/ionic_get_usuario';
   url3 : string = 'https://www.acumulando.com.br/ionic_put_usuario';
+  url4 : string = 'https://www.acumulando.com.br/ionic_delete_usuario';
 
   constructor(public http : Http, public toastCtrl : ToastController) {
   }
@@ -47,6 +48,8 @@ export class AcumulandoProvider {
     });
   }
 
+  //--------------------------------------------------------------
+
   getUsuarios(){
 
     let headers = new Headers();
@@ -56,9 +59,9 @@ export class AcumulandoProvider {
 
   }
 
-  editarUsuario(idrecebido: any, emailrecebido: any, senharecebida: any){
+  //--------------------------------------------------------------
 
-    console.log(idrecebido+' '+emailrecebido+' '+senharecebida);
+  editarUsuario(idrecebido: any, emailrecebido: any, senharecebida: any){
 
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
@@ -72,6 +75,41 @@ export class AcumulandoProvider {
         this.resposta = 'Não foi possível editar o usuário, tente novamente!';
       } else if(data["_body"]==0){
         this.resposta = 'Id ou email não encontrado!';
+      }
+      const toast = this.toastCtrl.create({
+        message: this.resposta,
+        duration: 3000,
+        position: 'bottom'
+      });
+      toast.present();
+    }, error => {
+      const toast = this.toastCtrl.create({
+        message: error,
+        duration: 2000,
+        position: 'bottom'
+      });
+      toast.present();
+    });
+  }
+
+  //--------------------------------------------------------------
+
+  apagarUsuario(idrecebido: any){
+
+    //console.log(idrecebido+' '+idrecebido);
+
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    let postData = 'id='+idrecebido;
+
+    this.http.post(this.url4, postData,{ headers: headers }).subscribe(data => {
+      if(data["_body"]==1){
+        this.resposta = 'Usuário apagado com sucesso!';
+      } else if(data["_body"]==2){
+        this.resposta = 'Não foi possível apagar o usuário, tente novamente!';
+      } else if(data["_body"]==0){
+        this.resposta = 'Id não encontrado!';
       }
       const toast = this.toastCtrl.create({
         message: this.resposta,

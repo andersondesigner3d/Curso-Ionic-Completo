@@ -13,6 +13,7 @@ export class HttpComplexoPage {
   emaildigitado: string;
   senhadigitada: string;
   listausuarios : any;
+  quantos = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private acumulando : AcumulandoProvider, public toastCtrl : ToastController, public alertCtrl : AlertController) {
     this.cataUsuarios();
@@ -31,6 +32,7 @@ export class HttpComplexoPage {
   cataUsuarios(){
     this.acumulando.getUsuarios().then((response) =>{
       this.listausuarios = response.json();
+      this.quantos = this.listausuarios.length;
     });
   }
 
@@ -65,6 +67,30 @@ export class HttpComplexoPage {
 
   editaDados(id: any,email: any,senha: any){
     this.acumulando.editarUsuario(id,email,senha);
+    this.cataUsuarios();
+  }
+
+  abreApaga(id: any, email: any){
+    let alert = this.alertCtrl.create({
+      title:'Tem certeza que deseja apagar '+email+' ?',
+      buttons: [
+        {
+          text: 'Cancelar'
+        },
+        {
+          text: 'Apagar',
+          handler: data=>{
+            this.apagaDados(id);
+          }
+        }
+      ]
+    });
+    //chama o alert
+    alert.present();  
+  }
+
+  apagaDados(id: any){
+    this.acumulando.apagarUsuario(id);
     this.cataUsuarios();
   }
 
