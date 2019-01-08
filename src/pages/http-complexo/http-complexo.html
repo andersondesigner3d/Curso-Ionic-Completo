@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Requisição HTTP</ion-title>
+    <ion-title>HTTP Complexo</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -28,8 +28,10 @@
       <ion-avatar item-start>
         <img src='../assets/imgs/usuario-icon.jpg'>
       </ion-avatar>
-      <h2>Email: {{data.email}}</h2>
+      <p>Email: {{data.email}}</p>
       <p>Senha: {{data.senha}}</p>
+      <button ion-button item-end color='secondary' (click)="abreEdita(data.id,data.email,data.senha)"><ion-icon name='md-create'></ion-icon></button>
+      <button ion-button item-end color='danger'><ion-icon name='trash'></ion-icon></button>
     </ion-item>
   </ion-list>
 
