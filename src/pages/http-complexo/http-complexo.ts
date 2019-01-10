@@ -1,7 +1,8 @@
+import { AvatarProvider } from './../../providers/avatar/avatar';
 import { AcumulandoProvider } from './../../providers/acumulando/acumulando';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
-import { stringify } from '@angular/compiler/src/util';
+import { IonicPage, NavController, NavParams, ToastController, AlertController, LoadingController } from 'ionic-angular';
+import { Camera, CameraOptions  } from '@ionic-native/camera';
 
 @IonicPage()
 @Component({
@@ -14,8 +15,11 @@ export class HttpComplexoPage {
   senhadigitada: string;
   listausuarios : any;
   quantos = '';
+  imagem : any;
+  meuavatar = '../assets/imgs/usuario-icon.jpg';
+  teste : any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private acumulando : AcumulandoProvider, public toastCtrl : ToastController, public alertCtrl : AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private acumulando : AcumulandoProvider, public toastCtrl : ToastController, public alertCtrl : AlertController, private camera : Camera, private avatar : AvatarProvider, private loadingCtrl : LoadingController) {
     this.cataUsuarios();
   }
 
@@ -94,6 +98,40 @@ export class HttpComplexoPage {
     this.cataUsuarios();
   }
 
+  tirarFoto(id: any){
+    const options: CameraOptions = {
+      quality: 100,
+      targetWidth: 400,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.PNG,
+      mediaType: this.camera.MediaType.PICTURE
+    };
+
+    this.camera.getPicture(options).then((imageData) => {
+      let base64Image = 'data:image/png;base64,' + imageData;
+      this.avatar.salvaFoto(id,base64Image);
+      
+      //faz a munganga do loading
+      const loading = this.loadingCtrl.create({
+        duration: 3000,
+        spinner: 'dots'//ios,ios-small,bubbles,circles,crescent,dots
+      });
+      loading.present();
   
+      setTimeout(()=>{
+        this.cataUsuarios();
+      },3000);
+    
+     }, (err) => {
+      
+      const toast = this.toastCtrl.create({
+        message: 'Erro ao tirar a foto!',
+        duration: 3000,
+        position: 'bottom'
+      });
+      toast.present();
+
+     });
+  }  
 
 }

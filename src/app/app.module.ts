@@ -52,6 +52,7 @@ import { DataProvider } from '../providers/data/data';
 import { VirtualscrollPage } from '../pages/virtualscroll/virtualscroll';
 import { HttpComplexoPage } from '../pages/http-complexo/http-complexo';
 import { AcumulandoProvider } from '../providers/acumulando/acumulando';
+import { AvatarProvider } from '../providers/avatar/avatar';
 
 @NgModule({
   declarations: [
@@ -155,6 +156,7 @@ import { AcumulandoProvider } from '../providers/acumulando/acumulando';
     CepProvider,
     DataProvider,
     AcumulandoProvider,
+    AvatarProvider,
   ]
 })
 export class AppModule {}

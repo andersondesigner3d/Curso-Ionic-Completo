@@ -20,18 +20,19 @@
       <ion-input type='password' [(ngModel)]='senhadigitada' required></ion-input>
     </ion-item>
     <button ion-button cloclor='primary' block (click)="cadastroUser()">Cadastrar</button>
+    <ion-item>
+      <h2>Usuários cadastrados:</h2>
+      <ion-badge item-end>{{quantos}}</ion-badge>
+    </ion-item>
   </ion-card>
-
-  <ion-item>
-    <h2>Usuários cadastrados:</h2>
-    <ion-badge item-end>{{quantos}}</ion-badge>
-  </ion-item>
+  
   <ion-list [virtualScroll]='listausuarios'>
     <ion-item *virtualItem='let data'>
-      <ion-avatar item-start>
-        <img src='../assets/imgs/usuario-icon.jpg'>
+      <ion-avatar item-start (click)="tirarFoto(data.id)">
+        <img *ngIf="data.imagem!=null" src="{{data.imagem}}">
+        <img *ngIf="data.imagem==null" src="../assets/imgs/usuario-icon.jpg">
       </ion-avatar>
-      <p>Email: {{data.email}}</p>
+      <p>Email:{{data.email}}</p>
       <p>Senha: {{data.senha}}</p>
       <button ion-button item-end color='secondary' (click)="abreEdita(data.id,data.email,data.senha)"><ion-icon name='md-create'></ion-icon></button>
       <button ion-button item-end color='danger' (click)="abreApaga(data.id,data.email)"><ion-icon name='trash'></ion-icon></button>
