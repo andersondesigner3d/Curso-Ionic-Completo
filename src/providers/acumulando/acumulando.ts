@@ -96,8 +96,6 @@ export class AcumulandoProvider {
 
   apagarUsuario(idrecebido: any){
 
-    //console.log(idrecebido+' '+idrecebido);
-
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
