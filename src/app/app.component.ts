@@ -38,6 +38,7 @@ import { GeolocationPage } from '../pages/geolocation/geolocation';
 import { HttpPage } from '../pages/http/http';
 import { VirtualscrollPage } from '../pages/virtualscroll/virtualscroll';
 import { HttpComplexoPage } from '../pages/http-complexo/http-complexo';
+import { StoragePage } from '../pages/storage/storage';
 
 @Component({
   templateUrl: 'app.html'
@@ -45,7 +46,7 @@ import { HttpComplexoPage } from '../pages/http-complexo/http-complexo';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HttpComplexoPage;//HomePage
+  rootPage: any = StoragePage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -88,7 +89,8 @@ export class MyApp {
       { title: 'Geolocalização', component: GeolocationPage },
       { title: 'HTTP', component: HttpPage },
       { title: 'Virtual Scroll', component: VirtualscrollPage },
-      { title: 'Http Complexo', component: HttpComplexoPage }      
+      { title: 'Http Complexo', component: HttpComplexoPage },
+      { title: 'Storage', component: StoragePage }      
     ];
 
   }

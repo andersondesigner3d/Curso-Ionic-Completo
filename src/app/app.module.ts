@@ -53,6 +53,8 @@ import { VirtualscrollPage } from '../pages/virtualscroll/virtualscroll';
 import { HttpComplexoPage } from '../pages/http-complexo/http-complexo';
 import { AcumulandoProvider } from '../providers/acumulando/acumulando';
 import { AvatarProvider } from '../providers/avatar/avatar';
+import { StoragePage } from '../pages/storage/storage';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -95,12 +97,14 @@ import { AvatarProvider } from '../providers/avatar/avatar';
     GeolocationPage,
     HttpPage,
     VirtualscrollPage,
-    HttpComplexoPage
+    HttpComplexoPage,
+    StoragePage
   ],
   imports: [
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
     //IonicModule.forRoot(MyApp, {mode: 'ios'}), //para deixar o app igual em todos sistemas
   ],
   bootstrap: [IonicApp],
@@ -144,7 +148,8 @@ import { AvatarProvider } from '../providers/avatar/avatar';
     GeolocationPage,
     HttpPage,
     VirtualscrollPage,
-    HttpComplexoPage
+    HttpComplexoPage,
+    StoragePage
   ],
   providers: [
     StatusBar,

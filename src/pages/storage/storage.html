@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Storage</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label stacked>Digite algo para ficar gravado:</ion-label>
+    <ion-input autofocus type='text' [(ngModel)]='texto' (keypress)="gravaTexto()" (keyup)="gravaTexto()"></ion-input>
+  </ion-item>
+
+</ion-content>
