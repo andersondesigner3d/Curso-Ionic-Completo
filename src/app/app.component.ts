@@ -39,6 +39,7 @@ import { HttpPage } from '../pages/http/http';
 import { VirtualscrollPage } from '../pages/virtualscroll/virtualscroll';
 import { HttpComplexoPage } from '../pages/http-complexo/http-complexo';
 import { StoragePage } from '../pages/storage/storage';
+import { SmsPage } from '../pages/sms/sms';
 
 @Component({
   templateUrl: 'app.html'
@@ -46,7 +47,7 @@ import { StoragePage } from '../pages/storage/storage';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;//HomePage
+  rootPage: any = SmsPage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -90,7 +91,8 @@ export class MyApp {
       { title: 'HTTP', component: HttpPage },
       { title: 'Virtual Scroll', component: VirtualscrollPage },
       { title: 'Http Complexo', component: HttpComplexoPage },
-      { title: 'Storage', component: StoragePage }      
+      { title: 'Storage', component: StoragePage },
+      { title: 'SMS', component: SmsPage }
     ];
 
   }

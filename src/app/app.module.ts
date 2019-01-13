@@ -55,6 +55,9 @@ import { AcumulandoProvider } from '../providers/acumulando/acumulando';
 import { AvatarProvider } from '../providers/avatar/avatar';
 import { StoragePage } from '../pages/storage/storage';
 import { IonicStorageModule } from '@ionic/storage';
+import { SmsPage } from '../pages/sms/sms';
+import { SMS } from '@ionic-native/sms';
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 @NgModule({
   declarations: [
@@ -98,7 +101,8 @@ import { IonicStorageModule } from '@ionic/storage';
     HttpPage,
     VirtualscrollPage,
     HttpComplexoPage,
-    StoragePage
+    StoragePage,
+    SmsPage
   ],
   imports: [
     BrowserModule,
@@ -149,12 +153,15 @@ import { IonicStorageModule } from '@ionic/storage';
     HttpPage,
     VirtualscrollPage,
     HttpComplexoPage,
-    StoragePage
+    StoragePage,
+    SmsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Camera,
+    SMS,
+    AndroidPermissions,
     BarcodeScanner,
     Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
