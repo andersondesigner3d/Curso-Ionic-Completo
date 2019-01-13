@@ -33,7 +33,7 @@ export class CameraPage {
      }, (err) => {
       
       const toast = this.toastCtrl.create({
-        message: 'Erro ao tirar a foto!',
+        message: 'Erro ao tirar a foto: '+ err,
         duration: 3000,
         position: 'bottom'
       });

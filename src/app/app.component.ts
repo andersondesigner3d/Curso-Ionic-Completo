@@ -46,7 +46,7 @@ import { StoragePage } from '../pages/storage/storage';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = StoragePage;//HomePage
+  rootPage: any = HomePage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 

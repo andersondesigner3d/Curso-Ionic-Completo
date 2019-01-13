@@ -26,7 +26,8 @@ export class BarcodePage {
       let alert = this.alertCtrl.create({
         title:resposta,
         buttons: ['OK']
-      }).present();
+      });
+      alert.present();
      });
 
   }

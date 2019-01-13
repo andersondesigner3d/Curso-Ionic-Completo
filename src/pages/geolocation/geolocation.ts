@@ -24,7 +24,8 @@ export class GeolocationPage {
       let alert = this.alertCtrl.create({
         title: error,
         buttons: ['OK']
-      }).present();
+      });
+      alert.present();
      });
 
   } 
