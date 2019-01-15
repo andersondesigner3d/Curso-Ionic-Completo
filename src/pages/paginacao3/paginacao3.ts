@@ -1,8 +1,7 @@
 import { Paginacao1Page } from './../paginacao1/paginacao1';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-paginacao3',
   templateUrl: 'paginacao3.html',

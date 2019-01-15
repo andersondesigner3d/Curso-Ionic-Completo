@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-
-@IonicPage()
 @Component({
   selector: 'page-input',
   templateUrl: 'input.html',
@@ -11,7 +8,7 @@ export class InputPage {
 
   nome : any = '';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor() {
   }
 
   ionViewDidLoad() {

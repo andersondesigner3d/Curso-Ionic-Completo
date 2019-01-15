@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, ToastController, LoadingController } from 'ionic-angular';
+import { ToastController, LoadingController } from 'ionic-angular';
 import { FileChooser } from '@ionic-native/file-chooser';
 import { FileOpener } from '@ionic-native/file-opener';
 import { FilePath } from '@ionic-native/file-path';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 
-@IonicPage()
 @Component({
   selector: 'page-file-transfer',
   templateUrl: 'file-transfer.html',

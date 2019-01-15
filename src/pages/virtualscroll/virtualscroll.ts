@@ -1,8 +1,7 @@
 import { DataProvider } from './../../providers/data/data';
 import { Component } from '@angular/core';
-import { IonicPage, ToastController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-virtualscroll',
   templateUrl: 'virtualscroll.html',

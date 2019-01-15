@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-fab',
   templateUrl: 'fab.html',
 })
 export class FabPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {

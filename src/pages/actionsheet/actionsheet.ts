@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
+import {  NavController, NavParams, ActionSheetController } from 'ionic-angular';
 import { MyApp } from '../../app/app.component';
 
-@IonicPage()
+
 @Component({
   selector: 'page-actionsheet',
   templateUrl: 'actionsheet.html',

@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, AlertController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 
-@IonicPage()
 @Component({
   selector: 'page-geolocation',
   templateUrl: 'geolocation.html',

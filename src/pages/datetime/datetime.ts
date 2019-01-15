@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-datetime',
   templateUrl: 'datetime.html',
@@ -17,7 +15,7 @@ export class DatetimePage {
   //so precisa mudar o fuso horário
   captura : any = new Date().toISOString();  
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor() {
   }
 
   ionViewDidLoad() {

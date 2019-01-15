@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, ToastController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 import { SMS } from '@ionic-native/sms';
 
-
-@IonicPage()
 @Component({
   selector: 'page-sms',
   templateUrl: 'sms.html',

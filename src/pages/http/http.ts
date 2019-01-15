@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, ToastController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 import { CepProvider } from '../../providers/cep/cep';
 
-
-@IonicPage()
 @Component({
   selector: 'page-http',
   templateUrl: 'http.html',

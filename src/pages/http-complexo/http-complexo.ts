@@ -1,10 +1,9 @@
 import { AvatarProvider } from './../../providers/avatar/avatar';
 import { AcumulandoProvider } from './../../providers/acumulando/acumulando';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, AlertController, LoadingController } from 'ionic-angular';
+import { NavController, NavParams, ToastController, AlertController, LoadingController } from 'ionic-angular';
 import { Camera, CameraOptions  } from '@ionic-native/camera';
 
-@IonicPage()
 @Component({
   selector: 'page-http-complexo',
   templateUrl: 'http-complexo.html',

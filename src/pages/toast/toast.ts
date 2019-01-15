@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-toast',
   templateUrl: 'toast.html',
 })
 export class ToastPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl : ToastController) {
+  constructor(public toastCtrl : ToastController) {
   }
 
   ionViewDidLoad() {

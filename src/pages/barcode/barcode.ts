@@ -1,8 +1,7 @@
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Component } from '@angular/core';
-import { IonicPage, AlertController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-barcode',
   templateUrl: 'barcode.html',

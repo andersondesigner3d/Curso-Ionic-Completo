@@ -1,8 +1,7 @@
 import { ModalconteudoPage } from './../modalconteudo/modalconteudo';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
+import { ModalController, AlertController } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-modal',
   templateUrl: 'modal.html',
@@ -11,7 +10,7 @@ export class ModalPage {
 
   valor : any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modCtrl : ModalController, public alertCtrl : AlertController) {
+  constructor(public modCtrl : ModalController, public alertCtrl : AlertController) {
   }
 
   ionViewDidLoad() {

@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, ToastController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 import { Camera, CameraOptions  } from '@ionic-native/camera';
 
-
-
-@IonicPage()
 @Component({
   selector: 'page-camera',
   templateUrl: 'camera.html',
