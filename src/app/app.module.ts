@@ -58,6 +58,12 @@ import { IonicStorageModule } from '@ionic/storage';
 import { SmsPage } from '../pages/sms/sms';
 import { SMS } from '@ionic-native/sms';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
+import { FileTransferPage } from '../pages/file-transfer/file-transfer';
+import { FileTransfer } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
+import { FileChooser } from '@ionic-native/file-chooser';
+import { FileOpener } from '@ionic-native/file-opener';
+import { FilePath  } from '@ionic-native/file-path';
 
 @NgModule({
   declarations: [
@@ -102,7 +108,8 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
     VirtualscrollPage,
     HttpComplexoPage,
     StoragePage,
-    SmsPage
+    SmsPage,
+    FileTransferPage
   ],
   imports: [
     BrowserModule,
@@ -154,7 +161,8 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
     VirtualscrollPage,
     HttpComplexoPage,
     StoragePage,
-    SmsPage
+    SmsPage,
+    FileTransferPage
   ],
   providers: [
     StatusBar,
@@ -164,6 +172,11 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
     AndroidPermissions,
     BarcodeScanner,
     Geolocation,
+    FileTransfer,
+    File,
+    FileChooser,
+    FileOpener,
+    FilePath,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CepProvider,
     DataProvider,
