@@ -91,6 +91,7 @@
     <plugin name="cordova-plugin-android-permissions" spec="~1.0.0" />
     <plugin name="cordova-sms-plugin" spec="~1.0.0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <plugin name="cordova-plugin-file-transfer" spec="~1.7.1" />
     <plugin name="cordova-plugin-file" spec="~6.0.1" />
     <plugin name="cordova-plugin-filechooser" spec="~1.2.0" />
@@ -99,6 +100,8 @@
     </plugin>
     <plugin name="cordova-plugin-filepath" spec="~1.5.1" />
 =======
+=======
+>>>>>>> parent of 4c2155b... feito o file transfer
     <engine name="android" spec="~7.1.4" />
 >>>>>>> parent of 4c2155b... feito o file transfer
 </widget>
