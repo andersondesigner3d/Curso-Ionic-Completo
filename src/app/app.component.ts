@@ -40,6 +40,7 @@ import { VirtualscrollPage } from '../pages/virtualscroll/virtualscroll';
 import { HttpComplexoPage } from '../pages/http-complexo/http-complexo';
 import { StoragePage } from '../pages/storage/storage';
 import { SmsPage } from '../pages/sms/sms';
+import { FileTransferPage } from '../pages/file-transfer/file-transfer';
 
 @Component({
   templateUrl: 'app.html'
@@ -47,7 +48,7 @@ import { SmsPage } from '../pages/sms/sms';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = SmsPage;//HomePage
+  rootPage: any = HomePage;//HomePage
 
   pages: Array<{title: string, component: any}>;
 
@@ -92,7 +93,8 @@ export class MyApp {
       { title: 'Virtual Scroll', component: VirtualscrollPage },
       { title: 'Http Complexo', component: HttpComplexoPage },
       { title: 'Storage', component: StoragePage },
-      { title: 'SMS', component: SmsPage }
+      { title: 'SMS', component: SmsPage },
+      { title: 'File Transfer', component: FileTransferPage }
     ];
 
   }
